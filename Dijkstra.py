@@ -112,14 +112,14 @@ def algoritmo_dijkstra(grafo, vertice_origen):
     print("Vértice origen     -   Vértice destino", "\t",
           "Distancia mínima", "\t", "Camino más corto", "\n")
 
-    for vertice in range(1, len(valores_distancia)):
+    for vertice in range(0, len(valores_distancia)):
         print("\t", vertice_origen, "\t", " - ", "\t", vertice, "\t\t\t",
               valores_distancia[vertice], "\t\t\t", end="")
         imprimir_camino_corto(arbol_menor_longitud, vertice)
         print("\n")
 
 
-grafo = [[0, 4, 0, 0, 0, 0, 0, 8, 0],
+"""grafo = [[0, 4, 0, 0, 0, 0, 0, 8, 0],
          [4, 0, 8, 0, 0, 0, 0, 11, 0],
          [0, 8, 0, 7, 0, 4, 0, 0, 2],
          [0, 0, 7, 0, 9, 14, 0, 0, 0],
@@ -127,8 +127,17 @@ grafo = [[0, 4, 0, 0, 0, 0, 0, 8, 0],
          [0, 0, 4, 14, 10, 0, 2, 0, 0],
          [0, 0, 0, 0, 0, 2, 0, 1, 6],
          [8, 11, 0, 0, 0, 0, 1, 0, 7],
-         [0, 0, 2, 0, 0, 0, 6, 7, 0]]
+         [0, 0, 2, 0, 0, 0, 6, 7, 0]]"""
 
-algoritmo_dijkstra(grafo, 0)
+
+grafo = [[0, 1, 2, 0, 0, 0],
+         [1, 0, 3, 9, 0, 0],
+         [2, 3, 0, 5, 8, 3],
+         [0, 9, 5, 0, 4, 0],
+         [0, 0, 8, 4, 0, 0],
+         [0, 0, 3, 0, 0, 0]]
+
+
+algoritmo_dijkstra(grafo, 3)
 
  
